@@ -47,4 +47,6 @@ The relationship between the phase angle and amplitude can provide insights into
 The governing equation for harmonic analysis is the response equation, which is expressed as:
 
 In this equation, F represents the harmonic force amplitude, f is the frequency of the excitation, t is the time variable, and θ is the phase angle. M, C, and K are the mass, damping, and stiffness matrices, respectively. Harmonic analysis aims to find the dynamic response x(t) of the system under harmonic loading conditions, which provides insights into the system's steady-state behavior and stress amplitudes at different frequencies.
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.PNG" align="center" width="741" height="429"/>  
+
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.png" align="center" width="560" height="420"/>  
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trr2.png" align="center" width="560" height="420"/> 
