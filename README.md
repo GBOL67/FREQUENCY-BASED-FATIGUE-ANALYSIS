@@ -21,7 +21,7 @@ Fatigue analysis is a systematic approach used to evaluate the fatigue life of s
 Finite Element Method (FEM) was utilized to analyze lattice structures modeled as cantilever beams. FEM enabled the generation of a system of equations representing the behavior of the structure for modal and harmonic analyses. Modal analysis determined the natural frequencies and mode shapes, while harmonic analysis explored the stress response to dynamic loading at specific frequencies. The rainflow count algorithm was applied to assess fatigue life by identifying stress cycles and calculating stress ranges and cycle counts. The combined approach of FEM, modal and harmonic analyses, and the rainflow count provided comprehensive insights into the lattice structures' durability and reliability under dynamic loading conditions. 
 To assess the fatigue life of the  lattice structures, a multi-step methodology is employed. The following steps outline the process.
 #
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/gb.PNG" align="center" width="359" height="659" /> 
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/gb.PNG" align="center" width="359" height="600" /> 
 
 FIG 1.(methodology)
 
@@ -66,7 +66,46 @@ Fig 4. (Frequency Response).
 FIG 5.  (Phase Angle).
 
 ## TRANSISENT ANALYSIS
-Transient analysis is a valuable technique utilized to extract time-stress data from stress amplitude frequency response obtained through harmonic analysis. The primary aim is to showcase the sinusoidal waveform of stress amplitude at different frequencies ranging from 135 Hz to 145 Hz, representing critical points of significant stress variation due to dynamic loading. By fitting the frequency response data using a Gaussian function, time-stress data and stress amplitudes over a 100-second duration can be determined. This enables a comprehensive understanding of how the system responds to dynamic loading, aiding in identifying critical frequency points, assessing fatigue-related issues, and optimizing structural design for enhanced durability and reliability under varying loads.
+Transient analysis is a valuable technique utilized to extract time-stress data from stress amplitude frequency response obtained through harmonic analysis. The primary aim is to showcase the sinusoidal waveform of stress amplitude at different frequencies ranging from 135 Hz to 145 Hz, representing critical points of significant stress variation due to dynamic loading. By fitting the frequency response and the phase angle data, time-stress data and stress amplitudes over a 100-second duration can be determined. To determine the stress at each time, the governing eqatuion is used:
+
+$$ Stress \cdot \( t) = Amplitude Stress \cdot \sin( 2 \cdot \pi  \cdot f \cdot t + \theta) $$
+
+Where; 't' represent the simuation time, 'f' is the freqenuncy at a amplitude stress and theta is it's phase angle. This enables a comprehensive understanding of how the system responds to dynamic loading, aiding in identifying critical frequency points, assessing fatigue-related issues, and optimizing structural design for enhanced durability and reliability under varying loads. The following matlab code runs the simuation.
+
+```
+  %fit for frequency response
+ sym  x 
+ gaussEqn = '(1/(sqrt(2*pi)*a))*exp(-(1/2)*((x-b)/c )^2)';
+ f2 = fit(Frequency,stressamp,gaussEqn,'Start', [w j w]);
+ plot(f2,Frequency,stressamp)
+ title('Fit with data points ')
+ 
+ %stress for a duration 'b' at frequency f
+ for i = it:et % frequency range 
+     
+ %fit for phase angle 
+  if i<j
+   ang = 0;
+elseif (120)<i && i<(141)
+    ang = 9.46*(i)-1260;
+else
+    ang = 180;
+  end
+  r(a) =  deg2rad(ang); %phase angle range
+  samp(a)= f2(i);  %amplitude stress range
+  
+   stress_ele = zeros(b,1);
+   p= zeros(b,1);
+   p(1)=0; %overall phase angle
+ for u=linspace(1,b,b) %over duration
+     stress_ele(u) = samp(a).*sin(p(u));
+      p(u+1)=p(u)+1/4*pi;
+ end
+ s1(:,a)=stress_ele; %stress for each frequency for a duration(b)
+ t(a,1)= ((((2*pi)-r(a))/2*pi*i)-((0-r(a))/2*pi*i)); % period (T) for each frequency
+ a = a+1;
+ end
+```
 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.png" align="center" width="560" height="420"/>  
 
@@ -89,7 +128,7 @@ The Matlab function utilizes the rainflow count algorithm to analyze the stress 
 
 ```
 
- ## WOHLER CURVE
+ ## WOHLER CURVE (FATIGUE LIFE VISUALIZATION)
 
 The stress amplitude and cycle count data are used to plot the Wohler curve. The Wohler curve represents the relationship between stress amplitude (amplitude of stress cycles) and the fatigue life (total number of cycles to failure) for each frequency. This curve helps visualize the fatigue behavior of the system under different frequency conditions and identifies critical stress levels that could lead to failure.
 
@@ -113,3 +152,120 @@ REFERENCES
 [3]         A. Rade, V. Steffen, and D. A. Rade, “EXPERIMENTAL MECHANICS-Structural Dynamics And Modal Analysis-D STRUCTURAL DYNAMICS AND MODAL ANALYSIS.”
  
 [4]         I. T. PAPAGIANNAKis, N. Au, J. Chan, A. T. Bergan, A. Oancea, and lBS J. Chan, “Application of ASTM E1049-85 Calculating Load Equivalence Factors from In Situ Strains.”
+
+## APPENDIX B
+
+ The file expcubic.m has the following code for the overall transient analysis and wohler curve visualitzation.
+ 
+```
+% Define the file name
+file_name = 'cubicsteady.csv';
+
+% Input Data
+data = readmatrix(file_name);
+Frequency = data(1:10, 6);
+PhaseAngle = data(1:10, 8);
+displacement = zeros(31,1);
+stressamp =  data(1:10, 9);
+
+ult = 45;%ultimate stress
+b = 100; %simulation duration
+it= 135; % point of focus frequency startpoint
+et=145; % point of focus frequency end point
+%guess point for guassian fit
+w= 22;
+j= 121;
+ran = et-it;% frequency range
+
+r = zeros(ran,1);
+s1 =zeros(b,ran);
+samp = zeros(ran,1);
+ a=1;
+ 
+ %fit for frequency response
+ sym  x 
+ gaussEqn = '(1/(sqrt(2*pi)*a))*exp(-(1/2)*((x-b)/c )^2)';
+ f2 = fit(Frequency,stressamp,gaussEqn,'Start', [w j w]);
+ plot(f2,Frequency,stressamp)
+ title('Fit with data points ')
+ 
+ %stress for a duration 'b' at frequency f
+ for i = it:et % frequency range 
+     
+ %fit for phase angle 
+  if i<j
+   ang = 0;
+elseif (120)<i && i<(141)
+    ang = 9.46*(i)-1260;
+else
+    ang = 180;
+  end
+  r(a) =  deg2rad(ang); %phase angle range
+  samp(a)= f2(i);  %amplitude stress range
+  
+   stress_ele = zeros(b,1);
+   p= zeros(b,1);
+   p(1)=0; %overall phase angle
+ for u=linspace(1,b,b) %over duration
+     stress_ele(u) = samp(a).*sin(p(u));
+      p(u+1)=p(u)+1/4*pi;
+ end
+ s1(:,a)=stress_ele; %stress for each frequency for a duration(b)
+ t(a,1)= ((((2*pi)-r(a))/2*pi*i)-((0-r(a))/2*pi*i)); % period (T) for each frequency
+ a = a+1;
+ end
+ 
+ real_acc= zeros(1,length(r));%acculumated cycle for each frequency
+ acc_stress= zeros(1,length(r));%amplitude stress for each frequency
+ for k = 1 : length(r)
+     %finding the turning points 
+      TF11 = islocalmax(s1(:,k));
+      TF22 = islocalmin(s1(:,k));
+      TFF =boolean(TF11+TF22);
+      st = s1(:,k);
+ [c1,hist1,edges1,rmm1,idx1] = rainflow(st(TFF),t(k,1));
+ acc_stress(k)= max(c1(:,2));%max stress for each frequency for a duration(b) also amplitude stress
+ acc = 0;
+  for p=1:length(c1(:,1))
+     acc=sum(c1(1:p,2));
+     if acc<ult 
+         real_acc(k)=sum(c1(1:p,1));%total number of cycle for each frequency for a duration(b)
+     end   
+  end
+ end
+ 
+ %Plotting the number of cycles For Each Frequency
+ dura = 10;
+rean =  it:et;
+r= 0:(1/t(dura,1))/8:(real_acc(dura)*(1/t(dura,1)));
+hi = zeros(length(r),1); 
+for i=1:length(r)
+         hi(i) = s1(i,dura);       
+end
+time = 0:i-1;
+plot(time,hi);
+disp(['For Freqency:', num2str(rean(dura ))])
+ 
+%plotting wohler curve
+%rearranging the amplitude stress results
+ o = length( acc_stress);
+ fork = zeros(length(acc_stress),1);
+for z = 1: length( acc_stress)
+    fork(z) = acc_stress(o);
+    o = o-1;
+end
+
+%rearranging the cycle results
+p = length(real_acc);
+ ork = zeros(length(acc_stress),1);
+for z = 1: length( real_acc)
+    ork(z) = 10^(real_acc(p));
+    p = p-1;
+end
+loglog(ork,fork,'or'); 
+yticks(fork);
+xlabel('Fatigue Life')
+ylabel('Stress Amplitude')
+grid on
+
+```
