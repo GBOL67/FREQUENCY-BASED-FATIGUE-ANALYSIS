@@ -73,7 +73,7 @@ Fig 6. (stress time analysis at 144Hz/phase angle 0).
 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trr2.png" align="center" width="560" height="420"/> 
 
-FIG 7.  (stress time anaylsis at 138Hz/phase angle 180).
+FIG 7.  (stress time anaylsis at 138Hz/phase angle 45).
 
 
 The transient analysis simulation spans 100 seconds, an intriguing observation emerged as the frequency approached and surpassed the resonance frequency. At this critical point, as seen in fig 6. the stress amplitude exhibited a pronounced increase, while the number of cycles necessary to initiate fatigue failure significantly decreased. This phenomenon can be attributed to the changing phase angle during dynamic loading. At resonance, the phase angle reaches its maximum value of 180 degrees, signifying that the excitation force is perfectly in phase with the system's response. This alignment leads to an amplified stress response, intensifying the destructive nature of the loading.
