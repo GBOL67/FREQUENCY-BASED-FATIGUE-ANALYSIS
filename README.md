@@ -50,3 +50,35 @@ In this equation, F represents the harmonic force amplitude, f is the frequency 
 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.png" align="center" width="560" height="420"/>  
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trr2.png" align="center" width="560" height="420"/> 
+
+## Rainflow Count 
+
+The Matlab function utilizes the rainflow count algorithm to analyze the stress time history signal and identify stress cycles by detecting turning points represented by. The function calculates the stress ranges and counts the number of stress cycles. Stress accumulation is determined by summing up the stress ranges of the counted cycles, and the process continues until the accumulated stress reaches the ultimate stress. Rainflow counting accurately estimates fatigue life by considering both positive and negative stress cycles, providing valuable insights for designing safer and more reliable structures under dynamic loading conditions.
+
+```
+  [c1,hist1,edges1,rmm1,idx1] = rainflow(st(TFF),t(k,1));
+
+```
+
+ ## WOHLER CURVE
+
+The stress amplitude and cycle count data are used to plot the Wohler curve. The Wohler curve represents the relationship between stress amplitude (amplitude of stress cycles) and the fatigue life (total number of cycles to failure) for each frequency. This curve helps visualize the fatigue behavior of the system under different frequency conditions and identifies critical stress levels that could lead to failure.
+
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/lllcool.png" align="center" width="560" height="420"/>  
+
+In a Wohler curve, the stress level at which a structure is said to have an infinite fatigue life is known as the "endurance limit" or "fatigue strength." This is the stress level below which the structure can endure an infinite number of stress cycles without experiencing fatigue failure. The maximum fatigue life considered for a structure to be practically infinite may vary depending on the specific industry, material, and engineering standards. In many cases, if a structure's fatigue life exceeds a certain threshold, such as 10^7 cycles or 10^9 cycles, it is often considered to have an "infinite" fatigue life for practical purposes. Therefore, a stress amplitude of 2.7662Mpa is said to be the maximum stress to be reach to achieve infinite fatigue life.
+
+## CONCLUSION
+The frequency-based numerical method provided valuable data to evaluate the fatigue life of the lattice structures. Through modal analysis, harmonic analysis, transient analysis, and Wohler curve construction, we gained comprehensive insights into the fatigue behavior and structural durability of the cubic lattice structures. This study contributes to a better understanding of lattice structures' performance under dynamic forces and can aid in optimizing their design for enhanced reliability and longevity in various engineering applications.
+
+## APPENDIX A
+
+REFERENCES 
+
+[1]         Bannantine, J. A., Comer, J. J., & Handrock, J. L. (2018). Fundamentals of Metal Fatigue Analysis (2nd ed.). Prentice Hall.
+ 
+[2]         “Dynamics of Structures Theory and Applications to Earthquake Engineering A.K. Chopra_NNN_bb”.
+ 
+[3]         A. Rade, V. Steffen, and D. A. Rade, “EXPERIMENTAL MECHANICS-Structural Dynamics And Modal Analysis-D STRUCTURAL DYNAMICS AND MODAL ANALYSIS.”
+ 
+[4]         I. T. PAPAGIANNAKis, N. Au, J. Chan, A. T. Bergan, A. Oancea, and lBS J. Chan, “Application of ASTM E1049-85 Calculating Load Equivalence Factors from In Situ Strains.”
