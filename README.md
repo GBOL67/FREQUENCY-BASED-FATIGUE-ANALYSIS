@@ -21,10 +21,18 @@ Fatigue analysis is a systematic approach used to evaluate the fatigue life of s
 Finite Element Method (FEM) was utilized to analyze lattice structures modeled as cantilever beams. FEM enabled the generation of a system of equations representing the behavior of the structure for modal and harmonic analyses. Modal analysis determined the natural frequencies and mode shapes, while harmonic analysis explored the stress response to dynamic loading at specific frequencies. The rainflow count algorithm was applied to assess fatigue life by identifying stress cycles and calculating stress ranges and cycle counts. The combined approach of FEM, modal and harmonic analyses, and the rainflow count provided comprehensive insights into the lattice structures' durability and reliability under dynamic loading conditions. 
 To assess the fatigue life of the  lattice structures, a multi-step methodology is employed. The following steps outline the process.
 #
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/gb.PNG" align="center" title="5 Bar Parallel Robot
-via MATLAB Simscape" alt="5 Bar Parallel Robot via MATLAB Simscape" width="359" height="659"  /> </a>
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/gb.PNG" align="center" width="359" height="659" /> 
 #
-##Specimen Data 
+  FIG 1.(methodology)
+#
+## Specimen Data 
 The cubic core lattice (fig [1]) is a representative designs of lattice structures used in engineering applications.  The cubic core lattice features a central cubic core, from which beams extend diagonally to form a three-dimensional lattice framework. The cubic core lattice exhibit exceptional mechanical properties, including lightweight nature, excellent stiffness-to-weight ratio, and energy absorption capabilities, making them suitable for various engineering applications.
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/gb.PNG" align="center" title="5 Bar Parallel Robot
-via MATLAB Simscape" alt="5 Bar Parallel Robot via MATLAB Simscape" width="359" height="659"  /> </a>
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/Capturet.PNG" align="center" width="297" height="234"/> 
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/Capturet.PNG" align="center" width="297" height="234"/>
+## MODAL ANALYSIS
+The data in Table [3] describes the participation factor of   the cubic lattice structure. The participation factor represents the proportion of a mode's kinetic energy or displacement energy relative to the total energy of the system. It provides insights into the mode's contribution to the overall dynamic behavior of the structure. A higher participation factor implies that the mode has a more significant influence on the system's response. For the cubic lattice structure, the mode 2 participation factor is -0.29182E-03 with a ratio of 0.100308. The results of the modal analysis provide the first few natural frequencies and their corresponding mode shapes for the cubic lattice. Each mode shape represents a specific vibrational pattern that the structure exhibits during free vibration. Based on the natural frequencies obtained from the modal analysis, engineers select a suitable range of frequencies for the harmonic analysis. The selected range typically includes the lowest natural frequency and its higher harmonics to account for a comprehensive frequency response of the structure under dynamic loading.
+The information gained from the modal analysis is critical for the subsequent harmonic analysis, as it helps engineers identify the frequencies at which the cubic lattice is more likely to experience significant dynamic responses. This knowledge allows them to set appropriate excitation frequencies and perform harmonic analysis to assess the structure's behavior under various loading conditions, which is essential for fatigue analysis and durability evaluation.
+The governing equation for modal analysis is the eigenvalue equation, which is expressed as:
+In this equation, K represents the stiffness matrix of the structure, ϕ is the mode shape vector, ω denotes the natural frequency, and M is the mass matrix. Modal analysis aims to solve this equation to obtain the natural frequencies and corresponding mode shapes, providing valuable insights into the dynamic behavior and vibrational characteristics of the system.
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/Capturet.PNG" align="center" width="297" 
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/Capturet.PNG" align="center" width="297" 
