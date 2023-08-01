@@ -37,5 +37,15 @@ The governing equation for modal analysis is the eigenvalue equation, which is e
 $$K . \theta = \omega^2 . M . \theta$$
 
 In this equation, K represents the stiffness matrix of the structure, ϕ is the mode shape vector, ω denotes the natural frequency, and M is the mass matrix. Modal analysis aims to solve this equation to obtain the natural frequencies and corresponding mode shapes, providing valuable insights into the dynamic behavior and vibrational characteristics of the system.
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/ppp.PNG" align="center" width="297" 
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/Capturet.PNG" align="center" width="297" 
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/ppp.PNG" align="center" width="297" height="174"/>  
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/Capturet.PNG" align="center" width="297" height="174"/>  
+
+## HARMONIC ANALYSIS
+
+The cubic lattice structure experiences a dynamic loading of 6kN. The frequency response for cubic lattice (fig [7]-fig [8]) shows a consistent phase angle of 180 degrees across all frequencies. This indicates that the displacement response remains in-phase with the excitation force throughout the frequency range of 61 Hz to 160 Hz. At a frequency of 138 Hz, the phase angle abruptly changes to 0 degrees, suggesting an out-of-phase displacement response for this specific frequency. The phase angle remains at 0 degrees for frequencies above 138 Hz, indicating that the displacement response remains out-of-phase with the excitation force in this frequency range.
+The relationship between the phase angle and amplitude can provide insights into the dynamic behavior of the lattice structures. In the provided data, we can observe that for most frequencies, the phase angle remains constant at either 0 degrees or 180 degrees. This suggests that the displacement response remains either in-phase or out-of-phase with the excitation force, resulting in consistent oscillatory behavior. However, at specific frequencies (127Hz-138 Hz), there is a significant change in the phase angle, indicating a phase shift in the displacement response. This phase shift can lead to constructive or destructive interference, resulting in complex motion patterns and varying amplitudes.
+The governing equation for harmonic analysis is the response equation, which is expressed as:
+
+In this equation, F represents the harmonic force amplitude, f is the frequency of the excitation, t is the time variable, and θ is the phase angle. M, C, and K are the mass, damping, and stiffness matrices, respectively. Harmonic analysis aims to find the dynamic response x(t) of the system under harmonic loading conditions, which provides insights into the system's steady-state behavior and stress amplitudes at different frequencies.
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.PNG" align="center" width="297" 
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trr2.PNG" align="center" width="297" 
