@@ -40,6 +40,8 @@ In this equation, K represents the stiffness matrix of the structure, ϕ is the 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/ppp.PNG" align="center" width="741" height="429"/>  
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/ezgif.com-video-to-gif.gif" align="center" width="600" height="243"/>  
 
+FIG 2.(methodology)
+
 ## HARMONIC ANALYSIS
 
 The cubic lattice structure experiences a dynamic loading of 6kN. The frequency response for cubic lattice (fig [7]-fig [8]) shows a consistent phase angle of 180 degrees across all frequencies. This indicates that the displacement response remains in-phase with the excitation force throughout the frequency range of 61 Hz to 160 Hz. At a frequency of 138 Hz, the phase angle abruptly changes to 0 degrees, suggesting an out-of-phase displacement response for this specific frequency. The phase angle remains at 0 degrees for frequencies above 138 Hz, indicating that the displacement response remains out-of-phase with the excitation force in this frequency range.
@@ -49,7 +51,12 @@ The governing equation for harmonic analysis is the response equation, which is 
 In this equation, F represents the harmonic force amplitude, f is the frequency of the excitation, t is the time variable, and θ is the phase angle. M, C, and K are the mass, damping, and stiffness matrices, respectively. Harmonic analysis aims to find the dynamic response x(t) of the system under harmonic loading conditions, which provides insights into the system's steady-state behavior and stress amplitudes at different frequencies.
 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.png" align="center" width="560" height="420"/>  
+
+FIG 3.(methodology)
+
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trr2.png" align="center" width="560" height="420"/> 
+
+FIG 4.(methodology)
 
 ## Rainflow Count 
 
@@ -65,6 +72,8 @@ The Matlab function utilizes the rainflow count algorithm to analyze the stress 
 The stress amplitude and cycle count data are used to plot the Wohler curve. The Wohler curve represents the relationship between stress amplitude (amplitude of stress cycles) and the fatigue life (total number of cycles to failure) for each frequency. This curve helps visualize the fatigue behavior of the system under different frequency conditions and identifies critical stress levels that could lead to failure.
 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/lllcool.png" align="center" width="560" height="420"/>  
+
+FIG 6.(methodology)
 
 In a Wohler curve, the stress level at which a structure is said to have an infinite fatigue life is known as the "endurance limit" or "fatigue strength." This is the stress level below which the structure can endure an infinite number of stress cycles without experiencing fatigue failure. The maximum fatigue life considered for a structure to be practically infinite may vary depending on the specific industry, material, and engineering standards. In many cases, if a structure's fatigue life exceeds a certain threshold, such as 10^7 cycles or 10^9 cycles, it is often considered to have an "infinite" fatigue life for practical purposes. Therefore, a stress amplitude of 2.7662Mpa is said to be the maximum stress to be reach to achieve infinite fatigue life.
 
