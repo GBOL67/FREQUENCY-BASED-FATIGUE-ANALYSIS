@@ -51,6 +51,9 @@ The cubic lattice structure experiences a dynamic loading of 6kN. The frequency 
 The relationship between the phase angle and amplitude can provide insights into the dynamic behavior of the lattice structures. In the provided data, we can observe that for most frequencies, the phase angle remains constant at either 0 degrees or 180 degrees. This suggests that the displacement response remains either in-phase or out-of-phase with the excitation force, resulting in consistent oscillatory behavior. However, at specific frequencies (127Hz-138 Hz), there is a significant change in the phase angle, indicating a phase shift in the displacement response. This phase shift can lead to constructive or destructive interference, resulting in complex motion patterns and varying amplitudes.
 The governing equation for harmonic analysis is the response equation, which is expressed as:
 
+$$ F \cdot \sin(2 \pi f t + \theta) = M \cdot \ddot{x} + C \cdot \dot{x} + k \cdot x $$
+
+
 In this equation, F represents the harmonic force amplitude, f is the frequency of the excitation, t is the time variable, and θ is the phase angle. M, C, and K are the mass, damping, and stiffness matrices, respectively. Harmonic analysis aims to find the dynamic response x(t) of the system under harmonic loading conditions, which provides insights into the system's steady-state behavior and stress amplitudes at different frequencies.
 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.png" align="center" width="560" height="420"/>  
