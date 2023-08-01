@@ -40,6 +40,7 @@ The governing equation for modal analysis is the eigenvalue equation, which is e
 $$K . \theta = \omega^2 . M . \theta$$
 
 In this equation, K represents the stiffness matrix of the structure, ϕ is the mode shape vector, ω denotes the natural frequency, and M is the mass matrix. Modal analysis aims to solve this equation to obtain the natural frequencies and corresponding mode shapes, providing valuable insights into the dynamic behavior and vibrational characteristics of the system.
+
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/ppp.PNG" align="center" width="741" height="429"/>  
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/ezgif.com-video-to-gif.gif" align="center" width="600" height="243"/>  
 
