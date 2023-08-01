@@ -69,13 +69,16 @@ Transient analysis is a valuable technique utilized to extract time-stress data 
 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.png" align="center" width="560" height="420"/>  
 
-Fig 6. (stress time analysis at 144Hz).
+Fig 6. (stress time analysis at 144Hz/phase angle 0).
 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trr2.png" align="center" width="560" height="420"/> 
 
-FIG 7.  (stress time anaylsis at 138Hz).
+FIG 7.  (stress time anaylsis at 138Hz/phase angle 180).
 
 
+The transient analysis simulation spans 100 seconds, an intriguing observation emerged as the frequency approached and surpassed the resonance frequency. At this critical point, as seen in fig 6. the stress amplitude exhibited a pronounced increase, while the number of cycles necessary to initiate fatigue failure significantly decreased. This phenomenon can be attributed to the changing phase angle during dynamic loading. At resonance, the phase angle reaches its maximum value of 180 degrees, signifying that the excitation force is perfectly in phase with the system's response. This alignment leads to an amplified stress response, intensifying the destructive nature of the loading.
+
+Additionally, an interesting trend emerged as the phase angle approached 0 and 180 degrees. As seen in fig 7., the number of cycles required for fatigue failure exhibited a notable increase. This behavior can be attributed to the optimal alignment of the excitation force and the system's response.At 0 degrees, the excitation force is perfectly in phase with the system's response, resulting in a more efficient stress transfer throughout the structure. This alignment allows for a smoother and more stable distribution of stress over time, leading to an increase in the number of cycles needed to accumulate sufficient damage for fatigue failure.Similarly, at 180 degrees, the system's response is perfectly out of phase with the applied force. While this may seem counterintuitive, this alignment also contributes to an increase in the number of cycles to failure. At this point, the alternating stress cycles are balanced, and the structure experiences minimal stress concentration or amplification, prolonging its fatigue life.
 
 ## Rainflow Count 
 
