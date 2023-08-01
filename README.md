@@ -29,6 +29,9 @@ FIG 1.(methodology)
 The cubic core lattice (fig [1]) is a representative designs of lattice structures used in engineering applications.  The cubic core lattice features a central cubic core, from which beams extend diagonally to form a three-dimensional lattice framework. The cubic core lattice exhibit exceptional mechanical properties, including lightweight nature, excellent stiffness-to-weight ratio, and energy absorption capabilities, making them suitable for various engineering applications.
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/xxx.PNG" align="center" width="676" height="174"/> 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/23.PNG" align="center" width="592" height="345"/>
+
+FIG 2.(Cubic Lattice Structure)
+
 ## MODAL ANALYSIS
 The data in Table [3] describes the participation factor of   the cubic lattice structure. The participation factor represents the proportion of a mode's kinetic energy or displacement energy relative to the total energy of the system. It provides insights into the mode's contribution to the overall dynamic behavior of the structure. A higher participation factor implies that the mode has a more significant influence on the system's response. For the cubic lattice structure, the mode 2 participation factor is -0.29182E-03 with a ratio of 0.100308. The results of the modal analysis provide the first few natural frequencies and their corresponding mode shapes for the cubic lattice. Each mode shape represents a specific vibrational pattern that the structure exhibits during free vibration. Based on the natural frequencies obtained from the modal analysis, engineers select a suitable range of frequencies for the harmonic analysis. The selected range typically includes the lowest natural frequency and its higher harmonics to account for a comprehensive frequency response of the structure under dynamic loading.
 The information gained from the modal analysis is critical for the subsequent harmonic analysis, as it helps engineers identify the frequencies at which the cubic lattice is more likely to experience significant dynamic responses. This knowledge allows them to set appropriate excitation frequencies and perform harmonic analysis to assess the structure's behavior under various loading conditions, which is essential for fatigue analysis and durability evaluation.
@@ -40,7 +43,7 @@ In this equation, K represents the stiffness matrix of the structure, ϕ is the 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/ppp.PNG" align="center" width="741" height="429"/>  
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/ezgif.com-video-to-gif.gif" align="center" width="600" height="243"/>  
 
-FIG 2.(methodology)
+FIG 3. (2nd Mode Shape of a cubic lattice structure).
 
 ## HARMONIC ANALYSIS
 
@@ -52,11 +55,11 @@ In this equation, F represents the harmonic force amplitude, f is the frequency 
 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.png" align="center" width="560" height="420"/>  
 
-FIG 3.(methodology)
+Fig 4. (Frequency response of cubic lattice Structure)
 
 <img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trr2.png" align="center" width="560" height="420"/> 
 
-FIG 4.(methodology)
+FIG 5. (Phase Angle of cubic lattice Structure)
 
 ## Rainflow Count 
 
