@@ -37,8 +37,8 @@ The governing equation for modal analysis is the eigenvalue equation, which is e
 $$K . \theta = \omega^2 . M . \theta$$
 
 In this equation, K represents the stiffness matrix of the structure, ϕ is the mode shape vector, ω denotes the natural frequency, and M is the mass matrix. Modal analysis aims to solve this equation to obtain the natural frequencies and corresponding mode shapes, providing valuable insights into the dynamic behavior and vibrational characteristics of the system.
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/ppp.PNG" align="center" width="297" height="174"/>  
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/Capturet.PNG" align="center" width="297" height="174"/>  
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/ppp.PNG" align="center" width="741" height="429"/>  
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/ezgif.com-video-to-gif.gif" align="center" width="600" height="243"/>  
 
 ## HARMONIC ANALYSIS
 
@@ -47,5 +47,4 @@ The relationship between the phase angle and amplitude can provide insights into
 The governing equation for harmonic analysis is the response equation, which is expressed as:
 
 In this equation, F represents the harmonic force amplitude, f is the frequency of the excitation, t is the time variable, and θ is the phase angle. M, C, and K are the mass, damping, and stiffness matrices, respectively. Harmonic analysis aims to find the dynamic response x(t) of the system under harmonic loading conditions, which provides insights into the system's steady-state behavior and stress amplitudes at different frequencies.
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.PNG" align="center" width="297" 
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trr2.PNG" align="center" width="297" 
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.PNG" align="center" width="741" height="429"/>  
