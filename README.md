@@ -56,13 +56,13 @@ $$ F \cdot \sin(2 \pi f t + \theta) = M \cdot \ddot{x} + C \cdot \dot{x} + k \cd
 
 In this equation, F represents the harmonic force amplitude, f is the frequency of the excitation, t is the time variable, and θ is the phase angle. M, C, and K are the mass, damping, and stiffness matrices, respectively. Harmonic analysis aims to find the dynamic response x(t) of the system under harmonic loading conditions, which provides insights into the system's steady-state behavior and stress amplitudes at different frequencies.
 
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.png" align="center" width="560" height="420"/>  
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/rrr.png" align="center" width="560" height="420"/>  
 
-Fig 4. (time stress analysis At 144hz).
+Fig 4. (Frequency Response).
 
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trr2.png" align="center" width="560" height="420"/> 
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/phhh.png" align="center" width="560" height="420"/> 
 
-FIG 5.  (time stress analysis At 138hz).
+FIG 5.  (Phase Angle).
 
 ## Rainflow Count 
 
