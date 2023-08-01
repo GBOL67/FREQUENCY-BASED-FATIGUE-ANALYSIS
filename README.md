@@ -60,9 +60,21 @@ In this equation, F represents the harmonic force amplitude, f is the frequency 
 
 Fig 4. (Frequency Response).
 
-<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/phhh.png" align="center" width="560" height="420"/> 
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/phhhh.png" align="center" width="560" height="420"/> 
 
 FIG 5.  (Phase Angle).
+
+## TRANSISENT ANALYSIS
+Transient analysis is a valuable technique utilized to extract time-stress data from stress amplitude frequency response obtained through harmonic analysis. The primary aim is to showcase the sinusoidal waveform of stress amplitude at different frequencies ranging from 135 Hz to 145 Hz, representing critical points of significant stress variation due to dynamic loading. By fitting the frequency response data using a Gaussian function, time-stress data and stress amplitudes over a 100-second duration can be determined. This enables a comprehensive understanding of how the system responds to dynamic loading, aiding in identifying critical frequency points, assessing fatigue-related issues, and optimizing structural design for enhanced durability and reliability under varying loads.
+
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trrr1.png" align="center" width="560" height="420"/>  
+
+Fig 6. (stress time analysis at 144Hz).
+
+<img src="https://github.com/GBOL67/FREQUENCY-BASED-FATIGUE-ANALYSIS/blob/main/Media/trr2.png" align="center" width="560" height="420"/> 
+
+FIG 7.  (stress time anaylsis at 138Hz).
+
 
 ## Rainflow Count 
 
