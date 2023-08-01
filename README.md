@@ -76,6 +76,7 @@ Fig 6. (stress time analysis at 144Hz).
 FIG 7.  (stress time anaylsis at 138Hz).
 
 
+
 ## Rainflow Count 
 
 The Matlab function utilizes the rainflow count algorithm to analyze the stress time history signal and identify stress cycles by detecting turning points represented by. The function calculates the stress ranges and counts the number of stress cycles. Stress accumulation is determined by summing up the stress ranges of the counted cycles, and the process continues until the accumulated stress reaches the ultimate stress. Rainflow counting accurately estimates fatigue life by considering both positive and negative stress cycles, providing valuable insights for designing safer and more reliable structures under dynamic loading conditions.
